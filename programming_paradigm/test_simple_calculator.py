@@ -28,7 +28,8 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.divide(10, 2), 5.0)
         self.assertAlmostEqual(self.calc.divide(7, 2), 3.5, places=7)
         self.assertAlmostEqual(self.calc.divide(-9, 3), -3.0, places=7)
-        self.assertAlmostEqual(self.calc.divide(1, 3), 1.0/3.0, places=7)
+        self.assertAlmostEqual(self.calc.divide(1, 3), 1.0 / 3.0, places=7)
+        # division by zero returns None
         self.assertIsNone(self.calc.divide(10, 0))
         self.assertIsNone(self.calc.divide(0, 0))
 
