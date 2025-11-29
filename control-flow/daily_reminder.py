@@ -1,11 +1,9 @@
-
-
+#1/usr/bin/env python3
 while True:
     task = input("Enter your task: ")
     priority = input("Priority (high/medium/low): ").lower()
     time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-  
     match priority:
         case "high":
             message = f"'{task}' is a high priority task"
@@ -15,12 +13,13 @@ while True:
             message = f"'{task}' is a low priority task"
         case _:
             print("Invalid priority. Please enter high, medium, or low.\n")
-            continue 
+            continue
 
     if time_bound == "yes":
         message += " that requires immediate attention today!"
     else:
-        message = "Note: " + message + ". Consider completing it when you have free time."
+        message += ". Consider completing it when you have free time."
 
     print("\nReminder:", message)
-    break  
+    break
+
